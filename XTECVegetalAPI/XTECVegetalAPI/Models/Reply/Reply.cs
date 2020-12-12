@@ -9,6 +9,6 @@ namespace XTECVegetalAPI.Models.Reply
     {
         public int conexionSuccess { get; set; }
         public string message { get; set; }
-        public Object data { get; set; }s
+        public Object data { get; set; }
     }
 }

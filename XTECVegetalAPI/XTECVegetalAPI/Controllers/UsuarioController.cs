@@ -1,16 +1,18 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using XTECVegetalAPI.Models;
 using XTECVegetalAPI.Models.Reply;
+using XTECVegetalAPI.Models.Request;
 
 namespace XTECVegetalAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class PerteneceUsuarioGrupoController : ControllerBase
+    public class UsuarioController : ControllerBase
     {
         //IActionResult es una inteface
         [HttpGet] //protocolo get
@@ -21,10 +23,10 @@ namespace XTECVegetalAPI.Controllers
             try
             {
                 //el codigo se elimina una vez ejecutado lo que tenga dentro del using()
-                using (TareaCorta1Context db = new TareaCorta1Context()) //coneccion a la base de datos
+                using (XTECDigitalContext db = new XTECDigitalContext()) //coneccion a la base de datos
                 {
-                    var list = db.User
-                        .ToList(); //variable con la lista de datos de la tabla 
+                    var list = db.Usuarios
+                        .ToList(); //variable con la lista de datos de la tabla
                     reply.conexionSuccess = 1;
                     reply.data = list;
                 }
@@ -37,6 +39,7 @@ namespace XTECVegetalAPI.Controllers
             return Ok(reply); //convierte la lista a Json
         }
 
+       /*
         [HttpGet] //protocolo get
         [Route("api/userproducer")]
         public IActionResult GetProd(string rol)
@@ -62,33 +65,26 @@ namespace XTECVegetalAPI.Controllers
             }
             return Ok(reply); //convierte la lista a Json
         }
-
+       */
 
         [HttpPost] //protocolo Post
         [Route("api/[controller]")]
-        public IActionResult Post(UserRequest request)
+        public IActionResult Post(UsuarioRequest request)
         {
             Reply reply = new Reply();
 
             try
             {
-                using (TareaCorta1Context db = new TareaCorta1Context())
+                using (XTECDigitalContext db = new XTECDigitalContext())
                 {
-                    User user = new User();
-                    user.IdUser = request.IdUser;
-                    user.Name = request.Name;
-                    user.LastName = request.LastName;
-                    user.Address = request.Address;
-                    user.BirthDate = request.BirthDate;
-                    user.PhoneNumber = request.PhoneNumber;
-                    user.Username = request.Username;
-                    user.Password = request.Password;
-                    user.Rol = request.Rol;
+                    Usuario usuario = new Usuario();
+                    usuario.IdRol = request.IdRol;
+                    usuario.Id = request.Id;
 
-                    db.User.Add(user);
+                    db.Usuarios.Add(usuario);
                     db.SaveChanges();
                     reply.conexionSuccess = 1;
-                    reply.message = "Cliente agregado";
+                    reply.message = "Usuario agregado";
 
                 }
             }
@@ -103,28 +99,22 @@ namespace XTECVegetalAPI.Controllers
 
         [HttpPut] //protocolo Put (editar)
         [Route("api/[controller]")]
-        public IActionResult Put(UserRequest request)
+        public IActionResult Put(UsuarioRequest request)
         {
             Reply reply = new Reply();
 
             try
             {
-                using (TareaCorta1Context db = new TareaCorta1Context())
+                using (XTECDigitalContext db = new XTECDigitalContext())
                 {
-                    User user = db.User.Find(request.IdUser);
-                    user.IdUser = request.IdUser;
-                    user.Name = request.Name;
-                    user.LastName = request.LastName;
-                    user.Address = request.Address;
-                    user.BirthDate = request.BirthDate;
-                    user.PhoneNumber = request.PhoneNumber;
-                    user.Username = request.Username;
-                    user.Password = request.Password;
+                    Usuario usuario = new Usuario();
+                    usuario.IdRol = request.IdRol;
+                    usuario.Id = request.Id;
 
-                    db.Entry(user).State = Microsoft.EntityFrameworkCore.EntityState.Modified; //le dice a la base de datos que se ha modificado  
+                    db.Entry(usuario).State = Microsoft.EntityFrameworkCore.EntityState.Modified; //le dice a la base de datos que se ha modificado  
                     db.SaveChanges();
                     reply.conexionSuccess = 1;
-                    reply.message = "Cliente editado";
+                    reply.message = "Usuario editado";
 
                 }
             }
@@ -138,7 +128,7 @@ namespace XTECVegetalAPI.Controllers
         }
 
 
-        //[HttpDelete("{id}")] //protocolo Delete
+        //protocolo Delete
         [HttpDelete]
         [Route("api/[controller]/{id}")]
         public IActionResult Delete(int id)
@@ -147,13 +137,13 @@ namespace XTECVegetalAPI.Controllers
 
             try
             {
-                using (TareaCorta1Context db = new TareaCorta1Context())
+                using (XTECDigitalContext db = new XTECDigitalContext())
                 {
-                    User user = db.User.Find(id);
+                    Usuario user = db.Usuarios.Find(id);
                     db.Remove(user);
                     db.SaveChanges();
                     reply.conexionSuccess = 1;
-                    reply.message = "Cliente eliminado";
+                    reply.message = "Usuario eliminado";
 
                 }
             }

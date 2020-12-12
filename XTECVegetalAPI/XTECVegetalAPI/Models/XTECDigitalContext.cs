@@ -35,6 +35,7 @@ namespace XTECVegetalAPI.Models
         public virtual DbSet<UsuarioAsignaEvaluacion> UsuarioAsignaEvaluacions { get; set; }
         public virtual DbSet<UsuarioCreaElemento> UsuarioCreaElementos { get; set; }
         public virtual DbSet<UsuarioSubeEntregable> UsuarioSubeEntregables { get; set; }
+        public object Usuario { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

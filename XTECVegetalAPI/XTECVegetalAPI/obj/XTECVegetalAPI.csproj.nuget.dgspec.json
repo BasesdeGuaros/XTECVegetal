@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\OneDrive\\Documentos\\TEC\\Bases de Datos\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj": {}
+    "C:\\Users\\garza\\Desktop\\IIS2020\\Bases de Datos\\Project2\\Code\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\OneDrive\\Documentos\\TEC\\Bases de Datos\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj": {
+    "C:\\Users\\garza\\Desktop\\IIS2020\\Bases de Datos\\Project2\\Code\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\OneDrive\\Documentos\\TEC\\Bases de Datos\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj",
+        "projectUniqueName": "C:\\Users\\garza\\Desktop\\IIS2020\\Bases de Datos\\Project2\\Code\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj",
         "projectName": "XTECVegetalAPI",
-        "projectPath": "C:\\Users\\danie\\OneDrive\\Documentos\\TEC\\Bases de Datos\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\OneDrive\\Documentos\\TEC\\Bases de Datos\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\obj\\",
+        "projectPath": "C:\\Users\\garza\\Desktop\\IIS2020\\Bases de Datos\\Project2\\Code\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\XTECVegetalAPI.csproj",
+        "packagesPath": "C:\\Users\\garza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\garza\\Desktop\\IIS2020\\Bases de Datos\\Project2\\Code\\XTECVegetal\\XTECVegetalAPI\\XTECVegetalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\garza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -81,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -75,3 +75,4 @@ C:\Users\danie\OneDrive\Documentos\TEC\Bases de Datos\XTECVegetal\XTECVegetalAPI
 C:\Users\danie\OneDrive\Documentos\TEC\Bases de Datos\XTECVegetal\XTECVegetalAPI\XTECVegetalAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\danie\OneDrive\Documentos\TEC\Bases de Datos\XTECVegetal\XTECVegetalAPI\XTECVegetalAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\danie\OneDrive\Documentos\TEC\Bases de Datos\XTECVegetal\XTECVegetalAPI\XTECVegetalAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\danie\OneDrive\Documentos\TEC\Bases de Datos\XTECVegetal\XTECVegetalAPI\XTECVegetalAPI\bin\Debug\netcoreapp3.1\aws-beanstalk-tools-defaults.json

@@ -11,7 +11,7 @@ import { ModalDirective } from 'angular-bootstrap-md';
 })
 export class LobbyComponent implements OnInit {
 
-  @ViewChild('frame') public basicModal: ModalDirective;
+ // @ViewChild('frame') public basicModal: ModalDirective;
 
   validatingForm: FormGroup;
   public username = '';

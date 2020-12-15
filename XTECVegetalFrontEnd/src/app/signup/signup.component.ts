@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { reply } from '../Models/reply'
+import { reply } from '../Models/reply';
 
 
 

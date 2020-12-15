@@ -20,10 +20,80 @@ export class LobbyComponent implements OnInit {
   modelUser:any = {};
   modelScan:any = {};
   public fname = "";
-  public listfollowers = [];
+  public listfollowers = ["Daniel"];
   public listUser = [];
   public listFriends = [];
   public listCount = [];
+  public listSemestre = ["II Semestre 2020","I Semestre 2020","II Semestre 2019","I Semestre 2019","II Semestre 2018","I Semestre 2018"];
+  public listCursos = [["Curso 1", "Curso 2"], ["Curso 4", "Curso 5", "Curso 6"]];
+  public semestresArray:any[] = [
+    {
+      'semestre': 'II Semestre 2020',
+      'cursos': [
+        {
+          "name": "Curso 1"
+        },
+        {
+          "name": "Curso 2"
+        },
+      ]
+    },
+    {
+      'semestre': 'I Semestre 2020',
+      'cursos': [
+        {
+          "name": "Curso 3"
+        },
+        {
+          "name": "Curso 4"
+        },
+      ]
+    },
+    {
+      'semestre': 'II Semestre 2019',
+      'cursos': [
+        {
+          "name": "Curso 5"
+        },
+        {
+          "name": "Curso 6"
+        },
+      ]
+    },
+    {
+      'semestre': 'I Semestre 2019',
+      'cursos': [
+        {
+          "name": "Curso 7"
+        },
+        {
+          "name": "Curso 8"
+        },
+      ]
+    },
+    {
+      'semestre': 'II Semestre 2018',
+      'cursos': [
+        {
+          "name": "Curso 9"
+        },
+        {
+          "name": "Curso 10"
+        },
+      ]
+    },
+    {
+      'semestre': 'I Semestre 2018',
+      'cursos': [
+        {
+          "name": "Curso 11"
+        },
+        {
+          "name": "Curso 12"
+        },
+      ]
+    }
+  ]
   infoImage:string;
   seguidos:number;
   seguidores:number;

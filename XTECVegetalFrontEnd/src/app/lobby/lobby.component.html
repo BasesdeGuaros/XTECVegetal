@@ -170,42 +170,31 @@
               <!--MARCO RICO ENDS-->
 
               <!--MARCO PIEDRERO BEGINS-->
-              <div class="col-md-6 center ">
+              <div class="col-md-12 center ">
                 <div
                   class="bg-white shadow rounded overflow-hidden margin navbar"
                   *ngFor="let element of listfollowers"
                 >
-                  <div class="px-5 pt-2 pb-2 cover2">
+                  <div class="px-10 pt-2 pb-2 w-100 cover2">
                     <div class="media align-items-center">
-                      <img
-                        src = "https://images-na.ssl-images-amazon.com/images/I/71qvuOvBRfL._AC_SL1500_.jpg"
-                        id = "fotoSeguidor"
-                        alt="..."
-                        width="50"
-                        class="rounded mb-2 img-thumbnail"
-                        style="vertical-align: middle; margin: 0px 5px"
-                      />
                       <div class="media-body mb-4 text-white">
-                        <h4 class="mt-0 mb-0">{{ element.idSeguidorNavigation.nombre }} {{ element.idSeguidorNavigation.apellido }}</h4>
+                        <h4 class="mt-0 mb-0">Cursos</h4>
                       </div>
                     </div>
                   </div>
 
                   <div
-                    class="bg-light p-4 d-flex justify-content-center text-center "
-                  >
+                    class="bg-light w-100 px-20 pt-2 pb-2 d-flex justify-content-center text-center "
+                     *ngFor="let semestre of semestresArray; let i = index" 
+		    >
                     <!-- Card -->
-                    <mdb-card class="px-5">
+                    <mdb-card class="px-20">
+			    <h4>{{semestre.semestre}}</h4>
                       <div
                         class="view rgba-white-slight waves-light "
                         mdbWavesEffect
-                      >
-                        <!-- Card img ACA TIENE QUE IR EL .GPX-->
-                        <mdb-card-img
-                          src="https://sites.google.com/site/danta125477/_/rsrc/1468377983649/croquis-de-como-llegar-a-la-institucion/san-agustin-casa-francois-map.gif"
-                          alt="Card image cap"
-                        ></mdb-card-img>
-                        <a>
+			>
+			<a>
                           <div class="mask"></div>
                         </a>
                       </div>
@@ -213,80 +202,31 @@
                       <mdb-card-body>
                         <!--Title-->
                         <mdb-card-title>
-                          <h4>Actividad realizada por el compa</h4>
+                          <h4>Cursos impartidos</h4>
                         </mdb-card-title>
 
                         <!--Text-->
                         <mdb-card-text>
                           <!-- Table  -->
-                          <table class="table">
+                          <table class="table"
+				  *ngFor="let curso of semestre.cursos"
+				  >
                             <!-- Table head -->
                             <thead>
                               <tr>
-                                <th>
+                                <th href="/organizer">
                                   <mdb-icon
                                     fas
                                     icon="leaf"
                                     class="mr-2 blue-text"
                                     aria-hidden="true"
-                                  ></mdb-icon
-                                  >Distancia
-                                </th>
-                                <th>
-                                  <mdb-icon
-                                    fas
-                                    icon="leaf"
-                                    class="mr-2 teal-text"
-                                    aria-hidden="true"
-                                  ></mdb-icon
-                                  >Elevacion
-                                </th>
-                                <th>
-                                  <mdb-icon
-                                    fas
-                                    icon="leaf"
-                                    class="indigo-text"
-                                    aria-hidden="true"
-                                  ></mdb-icon
-                                  >Duracion
+				    href="/organizer"
+                                  ></mdb-icon>
+				  <a href="/organizer">{{curso.name}}</a>
                                 </th>
                               </tr>
                             </thead>
                             <!-- Table head -->
-
-                            <!-- Table body -->
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <mdb-icon
-                                    far
-                                    icon="gem"
-                                    class="mr-2 grey-text"
-                                    aria-hidden="true"
-                                  ></mdb-icon
-                                  >85km
-                                </td>
-                                <td>
-                                  <mdb-icon
-                                    fas
-                                    icon="download"
-                                    class="mr-2 grey-text"
-                                    aria-hidden="true"
-                                  ></mdb-icon
-                                  >1.78m
-                                </td>
-                                <td>
-                                  <mdb-icon
-                                    fas
-                                    icon="book"
-                                    class="mr-2 grey-text"
-                                    aria-hidden="true"
-                                  ></mdb-icon
-                                  >2 s
-                                </td>
-                              </tr>
-                            </tbody>
-                            <!-- Table body -->
                           </table>
                           <!-- Table  -->
                         </mdb-card-text>

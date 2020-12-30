@@ -1,5 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { ModalDirective } from 'angular-bootstrap-md';
 
 
 @Component({
@@ -8,9 +10,13 @@ import { ActivatedRoute, Router } from "@angular/router";
   styleUrls: ["./organizer.component.scss"],
 })
 export class OrganizerComponent implements OnInit {
+
+  //@ViewChild('mbdModalInit') public basicModal: ModalDirective;
+  validatingForm: FormGroup;
   public username = "";
   public cedula = 0;
   public listUser = [];
+  modelSemester:any = {};
 
   constructor(
     
@@ -23,7 +29,19 @@ export class OrganizerComponent implements OnInit {
    */
   ngOnInit(): void {
     this.username = this.route.snapshot.paramMap.get("username");
+
+    this.validatingForm = new FormGroup({
+      yearRequired: new FormControl('', Validators.required),
+      
+
+    });
     //this.getUser();
+  }
+
+  // validadores
+
+  get validatingFormYear() {
+    return this.validatingForm.get('signupFormModalName');
   }
 
   /**
@@ -46,6 +64,10 @@ export class OrganizerComponent implements OnInit {
   gotoGroup() {
     this.router.navigate(["/organizerGroup", this.cedula]);
   }
+
+  /*showmodal(){
+    this.basicModal.show();
+  }*/
 
   /**
    * Funcion que hace una solicitud a la base de datos

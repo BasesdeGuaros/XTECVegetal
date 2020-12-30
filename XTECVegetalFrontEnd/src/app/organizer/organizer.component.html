@@ -4,38 +4,35 @@
     <!--Navbar-->
     <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
       <mdb-navbar-brand>
-        <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>StraviaTEC</strong></a>
+        <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>XTec Digital</strong></a>
       </mdb-navbar-brand>
       <links>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active waves-light" mdbWavesEffect>
-            <a class="nav-link" (click)="gotoRun()" >Carreras <span class="sr-only">(current)</span></a>
+            <a class="nav-link" (click)="mbdModalInit.show()" >Iniciar Semestre <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item waves-light" mdbWavesEffect>
-            <a class="nav-link" (click)="gotoChallenges()" >Retos</a>
+            <a class="nav-link" (click)="gotoChallenges()" >Cursos</a>
           </li>
-          <li class="nav-item waves-light" mdbWavesEffect>
-            <a class="nav-link" (click)="gotoGroup()" >Grupos</a>
-          </li>
+          
         </ul>
       </links>
     </mdb-navbar>
   
     <!-- Intro Section -->
-    <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://wallpaperaccess.com/full/1222880.jpg);">
+    <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://www.tec.ac.cr/hoyeneltec/sites/default/files/styles/colorbox/public/media/img/main/aerea_tec.jpg);">
       <div class="full-bg-img mask rgba-black-light">
         <div class="container flex-center">
           <div class="row pt-5 mt-3 w-100">
             <div class="col-md-12">
               <div class="text-center">
-                <h2 class="h1 h1-reponsive white-text font-up font-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Bienvenido Organizador</strong></h2>
+                <h2 class="h1 h1-reponsive white-text font-up font-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Bienvenido Administrador</strong></h2>
                 <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
-                <h5 class="font-up mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Photography &
-                    design</strong></h5>
+                <h5 class="font-up mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Version administrador</strong></h5>
                 <a mdbBtn color="white" outline="true" class="wow fadeInDown waves-light" data-wow-delay="0.4s"
-                  mdbWavesEffect>Reporte de Participantes por Carrera</a>
+                  mdbWavesEffect (click)="mbdModalInit.show()">Iniciar Semestre</a>
                 <a mdbBtn color="white" outline="true" class="wow fadeInDown waves-light" data-wow-delay="0.4s"
-                  mdbWavesEffect>Reporte de Posiciones de Carrera</a>
+                  mdbWavesEffect>Gestión de Cursos</a>
               </div>
             </div>
           </div>
@@ -45,3 +42,77 @@
   
   </header>
   <!--Main Navigation-->
+
+
+ <div
+    mdbModal
+    #mbdModalInit="mdbModal"
+    class="modal fade center px-5"
+    id="editModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Iniciar Semestre</h4>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="mbdModalInit.hide()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body mx-3">
+
+          <div class="row">
+
+            <div class="col col-md-6">
+
+              <div class="md-form mb-5">
+                <i class="fas fa-user prefix grey-text"></i>
+                <input type="text" id="form3" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="form3">Año</label>
+              </div>
+            </div>
+
+            <div class="col col-md12">
+
+              <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" >I Semestre</a>
+                  <a class="dropdown-item" >II Semestre</a>
+                  <a class="dropdown-item" >Verano</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+         
+
+
+          
+        </div>
+
+        <div class="modal-footer d-flex justify-content-center">
+          <button mdbBtn color="blue" class="waves-light" mdbWavesEffect  
+           >
+            Siguiente
+          </button>
+        </div>
+
+      
+      </div>
+    </div>
+  </div>

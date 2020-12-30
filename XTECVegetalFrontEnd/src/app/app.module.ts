@@ -12,8 +12,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { OrganizerComponent } from './organizer/organizer.component';
-import { LobbyComponent } from './lobby/lobby.component';
-import { CursoComponent } from './lobby/curso/curso.component';
+import { ProfessorComponent } from './professor/professor.component';
+import { CursoComponent } from './professor/curso/curso.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { CursoComponent } from './lobby/curso/curso.component';
     LoginComponent,
     SignupComponent,
     OrganizerComponent,
-    LobbyComponent,
+    ProfessorComponent,
     CursoComponent
   ],
   imports: [
@@ -37,7 +37,8 @@ import { CursoComponent } from './lobby/curso/curso.component';
       { path: '', component: LoginComponent, pathMatch: 'full' },
       { path: 'signup', component: SignupComponent},
       { path: 'organizer', component: OrganizerComponent},
-      { path: 'lobby', component: LobbyComponent}
+      { path: 'professor', component: ProfessorComponent},
+      { path: 'professor/curso', component: CursoComponent}
     ])
   ],
   providers: [],

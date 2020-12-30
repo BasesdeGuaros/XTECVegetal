@@ -5,11 +5,11 @@ import { ModalDirective } from 'angular-bootstrap-md';
 
 
 @Component({
-  selector: 'app-lobby',
-  templateUrl: './lobby.component.html',
-  styleUrls: ['./lobby.component.scss']
+  selector: 'app-professor',
+  templateUrl: './professor.component.html',
+  styleUrls: ['./professor.component.scss']
 })
-export class LobbyComponent implements OnInit {
+export class ProfessorComponent implements OnInit {
 
   @ViewChild('frame') public basicModal: ModalDirective;
 
